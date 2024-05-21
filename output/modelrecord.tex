@@ -1,0 +1,152 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    citecolor = {blue},
+    urlcolor = {blue},
+}
+
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage[breakable]{tcolorbox}
+\usepackage{float}
+\usepackage{enumitem}
+
+\title{My Happy Model (test)!: Model Card}
+\author{ModelRecords}
+\date{mr.metadata.last_updated}
+
+\begin{document}
+
+\newenvironment{mcsection}[1]
+    {
+        \textbf{#1}
+
+
+        \begin{itemize}[leftmargin=*,topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex,after=\vspace{\medskipamount}]
+    }
+    {
+        \end{itemize}
+    }
+
+\begin{adjustwidth}{-60pt}{-30pt}
+\begin{singlespace}
+
+\tcbset{colback=white!10!white}
+\begin{tcolorbox}[title=\textbf{My Happy Model (test)! : Model Card},
+breakable, sharp corners, boxrule=0.7pt]
+
+\begin{mcsection}{Model Details}
+    \item Blackbox external model access: 1
+    \item Capabilities demonstration: 1
+    \item Capabilities description: 1
+    \item Centralized model documentation: 1
+    \item Evaluation of capabilities: 1
+    \item External model access protocol: 1
+    \item External reproducibility of capabilities evaluation: 1
+    \item External reproducibility of intentional harm evaluation: 0
+    \item External reproducibility of mitigations evaluation: 0
+    \item External reproducibility of trustworthiness evaluation: 0
+    \item External reproducibility of unintentional harm evaluation: 0
+    \item Full external model access: 1
+    \item Inference compute evaluation: 0
+    \item Inference duration evaluation: 1
+    \item Input modality: 1
+    \item Intentional harm evaluation: 0
+    \item Limitations demonstration: 0
+    \item Limitations description: 1
+    \item Mitigations demonstration: 0
+    \item Mitigations description: 0
+    \item Mitigations evaluation: 0
+    \item Model architecture: 1
+    \item Asset license: 1
+    \item Model components: 1
+    \item Model size: 1
+    \item Output modality: 1
+    \item Risks demonstration: 0
+    \item Risks description: 0
+    \item Third party capabilities evaluation: 0
+    \item Third party evaluation of limitations: 1
+    \item Third party mitigations evaluation: 0
+    \item Third party risks evaluation: 0
+    \item Trustworthiness evaluation: 0
+    \item Unintentional harm evaluation: 0
+\end{mcsection}
+
+
+ 
+
+    \textbf{Intended use}
+            \item - Natural language processing tasks, including but not limited to translation, sentiment analysis, and question answering.
+            \item - Cross-lingual understanding and generation tasks.
+            \item - Instruction-based prompt generation for a wide range of languages.
+            \item - Zero-shot and few-shot learning applications.
+            \item - Exploratory data analysis and research in multilingual language model capabilities.
+    
+    \textbf{Factors}
+            \item - Language support and proficiency across a broad spectrum of languages.
+            \item - The clarity and specificity of instruction prompts.
+            \item - Model scalability and performance across different sizes from 300M to 176B parameters.
+            \item - Generalization abilities to unseen tasks and languages.
+            \item - Accessibility and ease of use for researchers and developers with different levels of resources.
+    
+    \textbf{Metrics}
+
+    TBD?
+
+    \textbf{Evaluation data}
+            \item - Description: A diverse set of evaluation tasks covering coreference resolution, natural language inference, sentence completion, and program synthesis across multiple languages.
+            \item - Description: Datasets from the Winogrande, ANLI, XNLI, and HumanEval evaluations, allowing for an extensive assessment of model performance in both seen and unseen languages.
+            \item - Description: Validation and test splits are utilized from the respective datasets to ensure unbiased evaluation.
+            \item - Description: Multilingual task evaluation employing prompts in both English and the respective native languages to gauge cross-lingual transfer capabilities.
+            \item - Description: Benchmarking against existing models like XGLM, T0, and GPT to understand the competitive landscape.
+    
+    \textbf{Training data}
+            \item - Description: The model utilizes the BIG-bench xP3 dataset for training, promoting a wide coverage of tasks and languages.
+            \item - Description: Incorporation of code and programming languages alongside natural languages to enhance the model's versatility.
+            \item - Description: Utilized datasets such as BIG-bench, ROOTS, and a subset of the mC4 corpus to provide rich, diverse linguistic and task coverage.
+            \item - Description: Finetuning approach on xP3, xP3mt, and P3 datasets to enable cross-lingual generalization and effective prompt-based task performance.
+            \item - Description: Leverages both pretrained (BLOOM, mT5) and bespoke large language models across various sizes for targeted task learning.
+    
+    \textbf{Environmental}
+        \item - Carbon emitted(tCO2eq): 
+    \item - Energy consumption: 
+    \item - Energy unit: 
+    \item - Compute hours: 
+
+    \textbf{Ethical considerations}
+            \item - Potential for biased or inaccurate outputs across less-supported languages, requiring careful validation.
+            \item - Use of the model in applications with impactful consequences should be approached with caution.
+            \item - Need for transparency regarding the training data sources and model limitations to users.
+            \item - Ethical considerations around data privacy and consent, especially in multilingual contexts.
+            \item - Awareness of cultural sensitivity and potential for reinforcing stereotypes must be considered in model application and development.
+    
+    \textbf{Recommendations}
+            \item - Employment of early stopping, addition of long tasks, and minimum generation length forcing for improved generative task performance.
+            \item - Fine-tuning with both English and machine-translated multilingual prompts for enhanced cross-lingual abilities.
+            \item - Utilization of the model in research to explore and expand the boundaries of zero-shot learning across languages.
+            \item - Adoption of ethical and fair use practices, considering the model's broad linguistic capabilities.
+            \item - Engagement with the BigScience community for collaborative research and development efforts.
+    
+    \textbf{Additional information}
+            \item - The project is conducted under the BigScience initiative, allowing for open collaboration and research.
+            \item - Models are released under RAIL and Apache 2.0 licenses for wide accessibility and use.
+            \item - Fine-tuned models incorporate biases towards short answers, affecting performance on generative tasks.
+            \item - Language contamination analysis in the pretraining corpus shows unintentional learning from 'unseen' languages.
+            \item - Recommendations include using a specific prompting format and considering model size according to task requirements.
+    
+ 
+
+
+\textbf{Quantitative Analyses}
+
+TBD?
+
+\end{tcolorbox}
+\end{singlespace}
+\end{adjustwidth}
+
+\end{document}

@@ -4,4 +4,4 @@ mr:
     publisher: "Happy panda co."
   relations:
     upstream:
-      - bloomz
+      - vicuna_13b
