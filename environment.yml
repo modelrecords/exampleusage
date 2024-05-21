@@ -1,0 +1,9 @@
+name: modelrecords_exampleusage
+channels:
+  - defaults
+dependencies:
+  - python>=3.9
+  - pip
+  - pip:
+    #- -e ../modelrecords
+    - "--editable=git+https://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@github.com/modelrecords/modelrecords.git@main#egg=modelrecords"

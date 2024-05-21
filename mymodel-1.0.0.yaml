@@ -1,0 +1,7 @@
+mr:
+  metadata:
+    name: My Happy Model (test)!
+    publisher: "Happy panda co."
+  relations:
+    upstream:
+      - bloomz
