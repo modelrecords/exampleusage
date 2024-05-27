@@ -1,7 +1,8 @@
 mr:
+  type: model
   metadata:
     name: My Happy Model (test)!
     publisher: "Happy panda co."
   relations:
     upstream:
-      - vicuna_13b
+      - plip
